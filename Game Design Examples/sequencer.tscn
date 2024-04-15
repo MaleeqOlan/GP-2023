@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bv1vlrmjcjsna"]
+[gd_scene load_steps=18 format=3 uid="uid://bv1vlrmjcjsna"]
 
 [ext_resource type="Script" path="res://root1.gd" id="1_xgocf"]
 [ext_resource type="Texture2D" uid="uid://qxhx43vqvaf4" path="res://test1.png" id="2_6f3kf"]
@@ -8,6 +8,12 @@
 [ext_resource type="Theme" uid="uid://bsyatf2qyqicf" path="res://bryans_theme.tres" id="4_yc7u6"]
 [ext_resource type="Texture2D" uid="uid://cxwnffbtb26b2" path="res://Arms.png" id="6_f15ek"]
 [ext_resource type="Script" path="res://expand.gd" id="6_rcy7s"]
+[ext_resource type="Script" path="res://Control.gd" id="9_n10qc"]
+[ext_resource type="AudioStream" uid="uid://ci10touiqocvp" path="res://piano-g-6200.mp3" id="10_4o4d1"]
+[ext_resource type="AudioStream" uid="uid://47pa122v7xs4" path="res://do-80236 (mp3cut.net).mp3" id="10_brvu2"]
+[ext_resource type="AudioStream" uid="uid://dw1yu87mylwpk" path="res://la-80237 (mp3cut.net).mp3" id="10_pgl3b"]
+[ext_resource type="AudioStream" uid="uid://cqrldaogigxr3" path="res://sol-101774 (mp3cut.net).mp3" id="11_qxado"]
+[ext_resource type="AudioStream" uid="uid://36sdwlum0jpy" path="res://mi-80239 (mp3cut.net).mp3" id="11_t0d88"]
 
 [sub_resource type="Animation" id="Animation_nvk2n"]
 resource_name = "PLAYING PIANO"
@@ -64,18 +70,6 @@ libraries = {
 "": SubResource("AnimationLibrary_733qy")
 }
 
-[node name="Button" type="Button" parent="Node/Sprite2D"]
-anchors_preset = -1
-anchor_left = -0.812
-anchor_top = 0.236
-anchor_right = -0.812
-anchor_bottom = 0.236
-offset_left = -933.132
-offset_top = -893.284
-offset_right = -499.132
-offset_bottom = -456.284
-action_mode = 0
-
 [node name="CanvasLayer" type="CanvasLayer" parent="Node"]
 layer = -1
 
@@ -100,6 +94,7 @@ note_scene = ExtResource("4_i4a6q")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer"]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -154,3 +149,104 @@ layout_mode = 2
 [node name="Button8" type="Button" parent="CanvasLayer/ScrollContainer/PanelContainer/GridContainer"]
 layout_mode = 2
 text = "jhjhjh"
+
+[node name="Control5" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 180.0
+offset_top = -8.0
+offset_right = 1161.0
+offset_bottom = 542.0
+script = ExtResource("9_n10qc")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control5"]
+position = Vector2(-4, 0)
+stream = ExtResource("10_pgl3b")
+
+[node name="Button" type="Button" parent="Control5/AudioStreamPlayer2D"]
+offset_left = -129.0
+offset_top = 351.0
+offset_right = -42.0
+offset_bottom = 558.0
+
+[node name="Control3" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 167.0
+offset_top = -4.0
+offset_right = 1148.0
+offset_bottom = 546.0
+script = ExtResource("9_n10qc")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control3"]
+position = Vector2(-4, 0)
+stream = ExtResource("11_t0d88")
+
+[node name="Button" type="Button" parent="Control3/AudioStreamPlayer2D"]
+offset_left = -195.0
+offset_top = 350.0
+offset_right = -116.0
+offset_bottom = 549.0
+
+[node name="Control4" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 2.0
+offset_right = 991.0
+offset_bottom = 552.0
+script = ExtResource("9_n10qc")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control4"]
+position = Vector2(-4, 0)
+stream = ExtResource("10_brvu2")
+
+[node name="Button" type="Button" parent="Control4/AudioStreamPlayer2D"]
+offset_left = -119.0
+offset_top = 342.0
+offset_right = -40.0
+offset_bottom = 541.0
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 180.0
+offset_top = -8.0
+offset_right = 1161.0
+offset_bottom = 542.0
+script = ExtResource("9_n10qc")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control"]
+position = Vector2(-4, 0)
+stream = ExtResource("10_4o4d1")
+
+[node name="Button" type="Button" parent="Control/AudioStreamPlayer2D"]
+offset_left = -31.0
+offset_top = 345.0
+offset_right = 58.0
+offset_bottom = 552.0
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 345.0
+offset_top = 1.0
+offset_right = 977.0
+offset_bottom = 548.0
+script = ExtResource("9_n10qc")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control2"]
+position = Vector2(-4, 0)
+stream = ExtResource("11_qxado")
+
+[node name="Button" type="Button" parent="Control2/AudioStreamPlayer2D"]
+offset_left = -524.0
+offset_top = 348.0
+offset_right = -445.0
+offset_bottom = 547.0
+
+[connection signal="pressed" from="Control5/AudioStreamPlayer2D/Button" to="Control5" method="_on_button_pressed"]
+[connection signal="pressed" from="Control3/AudioStreamPlayer2D/Button" to="Control3" method="_on_button_pressed"]
+[connection signal="pressed" from="Control4/AudioStreamPlayer2D/Button" to="Control4" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/AudioStreamPlayer2D/Button" to="Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Control2/AudioStreamPlayer2D/Button" to="Control2" method="_on_button_pressed"]
