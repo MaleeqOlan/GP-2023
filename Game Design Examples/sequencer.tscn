@@ -1,19 +1,80 @@
-[gd_scene load_steps=7 format=3 uid="uid://bv1vlrmjcjsna"]
+[gd_scene load_steps=12 format=3 uid="uid://bv1vlrmjcjsna"]
 
 [ext_resource type="Script" path="res://root1.gd" id="1_xgocf"]
+[ext_resource type="Texture2D" uid="uid://qxhx43vqvaf4" path="res://test1.png" id="2_6f3kf"]
 [ext_resource type="Script" path="res://sequencer.gd" id="2_f7sqc"]
 [ext_resource type="PackedScene" uid="uid://dnbgsshu5js6g" path="res://sample_scene.tscn" id="3_e7xm4"]
 [ext_resource type="PackedScene" uid="uid://wx5yg1eqc384" path="res://button.tscn" id="4_i4a6q"]
 [ext_resource type="Theme" uid="uid://bsyatf2qyqicf" path="res://bryans_theme.tres" id="4_yc7u6"]
+[ext_resource type="Texture2D" uid="uid://cxwnffbtb26b2" path="res://Arms.png" id="6_f15ek"]
 [ext_resource type="Script" path="res://expand.gd" id="6_rcy7s"]
+
+[sub_resource type="Animation" id="Animation_nvk2n"]
+resource_name = "PLAYING PIANO"
+length = 11.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.7, 2.8, 2.9, 3, 3.1, 3.2, 3.7, 3.8, 3.9, 4, 4.1, 4.2, 4.7, 4.8, 4.9, 5.4, 5.5, 5.6, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 7.1, 7.2, 7.3, 7.4, 7.5, 7.6, 8.1, 8.2, 8.3, 8.4, 8.5, 8.6, 9.1, 9.2, 9.3, 9.4, 9.5, 9.6, 10.1, 10.2, 10.3),
+"transitions": PackedFloat32Array(57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68, 57.68),
+"update": 1,
+"values": [0, 2, 4, 0, 2, 4, 0, 2, 4, 0, 2, 4, 0, 2, 4, 0, 2, 4, 0, 2, 4, 0, 2, 4, 0, 2, 4, 0, 2, 4, 0, 2, 4, 0, 2, 4, 0, 2, 4, 0, 2, 4, 0, 2, 4, 0, 2, 4, 0, 2, 4, 0, 2, 4, 0, 2, 4, 0, 2, 4]
+}
+
+[sub_resource type="Animation" id="Animation_dmh3f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_733qy"]
+_data = {
+"PLAYING PIANO": SubResource("Animation_nvk2n"),
+"RESET": SubResource("Animation_dmh3f")
+}
 
 [node name="root" type="Node2D"]
 script = ExtResource("1_xgocf")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="Node/CanvasLayer"]
+offset_left = -422.0
+offset_top = -156.0
+offset_right = 1498.0
+offset_bottom = 924.0
+texture = ExtResource("2_6f3kf")
 
 [node name="sequencer" type="Node2D" parent="."]
 script = ExtResource("2_f7sqc")
 pad_scene = ExtResource("3_e7xm4")
 note_scene = ExtResource("4_i4a6q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(446, 621)
+scale = Vector2(0.310979, 0.475929)
+texture = ExtResource("6_f15ek")
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_733qy")
+}
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
