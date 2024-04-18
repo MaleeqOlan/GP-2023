@@ -60,13 +60,32 @@ _data = {
 [node name="root" type="Node2D"]
 script = ExtResource("1_xgocf")
 
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer2"]
+visibility_layer = 2
+anchors_preset = -1
+anchor_left = -0.13
+anchor_top = 0.437
+anchor_right = -0.13
+anchor_bottom = 0.437
+offset_left = 144.12
+offset_top = -438.488
+offset_right = 1145.12
+offset_bottom = 570.512
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_6f3kf")
+expand_mode = 1
+
 [node name="Node" type="Node" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Node"]
 top_level = true
 visibility_layer = 524289
-position = Vector2(446.013, 726.938)
-scale = Vector2(0.310997, 0.315296)
+position = Vector2(473, 785)
+scale = Vector2(0.462472, 0.376599)
 texture = ExtResource("6_f15ek")
 hframes = 5
 
@@ -74,22 +93,6 @@ hframes = 5
 libraries = {
 "": SubResource("AnimationLibrary_733qy")
 }
-
-[node name="CanvasLayer" type="CanvasLayer" parent="Node"]
-layer = -1
-
-[node name="TextureRect" type="TextureRect" parent="Node/CanvasLayer"]
-visibility_layer = 2
-anchors_preset = -1
-anchor_left = -0.13
-anchor_top = 0.437
-anchor_right = -0.13
-anchor_bottom = 0.437
-offset_left = -408.88
-offset_top = -618.488
-offset_right = 1511.12
-offset_bottom = 461.512
-texture = ExtResource("2_6f3kf")
 
 [node name="sequencer" type="Node2D" parent="."]
 script = ExtResource("2_f7sqc")
@@ -155,27 +158,28 @@ layout_mode = 2
 layout_mode = 2
 text = "jhjhjh"
 
-[node name="Control7" type="Control" parent="."]
+[node name="Sound3" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 241.0
+offset_left = 717.0
 offset_top = -6.0
 offset_right = 1222.0
-offset_bottom = 544.0
+offset_bottom = 261.0
 script = ExtResource("9_n10qc")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control7"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sound3"]
 position = Vector2(-4, 0)
 stream = ExtResource("10_6eosu")
+volume_db = 3.38
 
-[node name="Button" type="Button" parent="Control7/AudioStreamPlayer2D"]
+[node name="Button" type="Button" parent="Sound3/AudioStreamPlayer2D"]
 self_modulate = Color(1, 1, 1, 0)
-offset_left = -101.0
-offset_top = 355.0
-offset_right = 4.0
-offset_bottom = 562.0
+offset_left = -5.0
+offset_top = 499.0
+offset_right = 35.0
+offset_bottom = 683.0
 
-[node name="Control8" type="Control" parent="."]
+[node name="Sound4" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1099.0
@@ -184,18 +188,19 @@ offset_right = 1222.0
 offset_bottom = 63.0
 script = ExtResource("9_n10qc")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control8"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sound4"]
 position = Vector2(-4, 0)
 stream = ExtResource("11_1gcmg")
+volume_db = 3.969
 
-[node name="Button" type="Button" parent="Control8/AudioStreamPlayer2D"]
+[node name="Button" type="Button" parent="Sound4/AudioStreamPlayer2D"]
 self_modulate = Color(1, 1, 1, 0)
-offset_left = -423.0
-offset_top = 346.0
-offset_right = -341.0
-offset_bottom = 553.0
+offset_left = -820.0
+offset_top = 500.0
+offset_right = -737.0
+offset_bottom = 684.0
 
-[node name="Control9" type="Control" parent="."]
+[node name="Sound2" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1132.0
@@ -204,18 +209,20 @@ offset_right = 1222.0
 offset_bottom = 95.0
 script = ExtResource("9_n10qc")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control9"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sound2"]
 position = Vector2(-4, 0)
 stream = ExtResource("12_7f11y")
+volume_db = 15.878
+pitch_scale = 1.3
 
-[node name="Button" type="Button" parent="Control9/AudioStreamPlayer2D"]
+[node name="Button" type="Button" parent="Sound2/AudioStreamPlayer2D"]
 self_modulate = Color(1, 1, 1, 0)
-offset_left = -892.0
-offset_top = 362.0
-offset_right = -780.0
-offset_bottom = 569.0
+offset_left = -883.0
+offset_top = 496.0
+offset_right = -845.0
+offset_bottom = 679.0
 
-[node name="Control10" type="Control" parent="."]
+[node name="Sound5" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1114.0
@@ -224,18 +231,19 @@ offset_right = 1222.0
 offset_bottom = 56.0
 script = ExtResource("9_n10qc")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control10"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sound5"]
 position = Vector2(-4, 0)
 stream = ExtResource("13_qwi28")
+volume_db = 3.11
 
-[node name="Button" type="Button" parent="Control10/AudioStreamPlayer2D"]
+[node name="Button" type="Button" parent="Sound5/AudioStreamPlayer2D"]
 self_modulate = Color(1, 1, 1, 0)
 offset_left = -757.0
-offset_top = 346.0
-offset_right = -645.0
-offset_bottom = 553.0
+offset_top = 496.0
+offset_right = -709.0
+offset_bottom = 680.0
 
-[node name="Control11" type="Control" parent="."]
+[node name="Sound1" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 977.0
@@ -244,18 +252,20 @@ offset_right = 1222.0
 offset_bottom = 127.0
 script = ExtResource("9_n10qc")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control11"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sound1"]
 position = Vector2(-4, 0)
 stream = ExtResource("14_a2ioj")
+volume_db = 24.0
+pitch_scale = 1.45
 
-[node name="Button" type="Button" parent="Control11/AudioStreamPlayer2D"]
+[node name="Button" type="Button" parent="Sound1/AudioStreamPlayer2D"]
 self_modulate = Color(1, 1, 1, 0)
-offset_left = -414.0
-offset_top = 355.0
-offset_right = -295.0
-offset_bottom = 562.0
+offset_left = -776.0
+offset_top = 500.0
+offset_right = -730.0
+offset_bottom = 655.0
 
-[node name="Control6" type="Control" parent="."]
+[node name="Sound6" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1168.0
@@ -264,18 +274,19 @@ offset_right = 1222.0
 offset_bottom = 77.0
 script = ExtResource("9_n10qc")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control6"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sound6"]
 position = Vector2(-4, 0)
 stream = ExtResource("10_6eosu")
+volume_db = 3.176
 
-[node name="Button" type="Button" parent="Control6/AudioStreamPlayer2D"]
+[node name="Button" type="Button" parent="Sound6/AudioStreamPlayer2D"]
 self_modulate = Color(1, 1, 1, 0)
-offset_left = -1121.0
-offset_top = 351.0
-offset_right = -1016.0
-offset_bottom = 558.0
+offset_left = -794.0
+offset_top = 501.0
+offset_right = -744.0
+offset_bottom = 680.0
 
-[node name="Control5" type="Control" parent="."]
+[node name="Sound7" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1143.0
@@ -284,18 +295,19 @@ offset_right = 1161.0
 offset_bottom = 89.0
 script = ExtResource("9_n10qc")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control5"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sound7"]
 position = Vector2(-4, 0)
 stream = ExtResource("10_pgl3b")
+volume_db = 4.33
 
-[node name="Button" type="Button" parent="Control5/AudioStreamPlayer2D"]
+[node name="Button" type="Button" parent="Sound7/AudioStreamPlayer2D"]
 self_modulate = Color(1, 1, 1, 0)
-offset_left = -1187.0
-offset_top = 357.0
-offset_right = -1100.0
-offset_bottom = 564.0
+offset_left = -720.0
+offset_top = 500.0
+offset_right = -634.0
+offset_bottom = 680.0
 
-[node name="Control3" type="Control" parent="."]
+[node name="Sound8" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 839.0
@@ -304,18 +316,19 @@ offset_right = 1148.0
 offset_bottom = 58.0
 script = ExtResource("9_n10qc")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control3"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sound8"]
 position = Vector2(-4, 0)
 stream = ExtResource("11_t0d88")
+volume_db = 3.995
 
-[node name="Button" type="Button" parent="Control3/AudioStreamPlayer2D"]
+[node name="Button" type="Button" parent="Sound8/AudioStreamPlayer2D"]
 self_modulate = Color(1, 1, 1, 0)
-offset_left = -942.0
-offset_top = 357.0
-offset_right = -877.0
-offset_bottom = 556.0
+offset_left = -304.0
+offset_top = 489.0
+offset_right = -250.0
+offset_bottom = 677.0
 
-[node name="Control4" type="Control" parent="."]
+[node name="Sound9" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 935.0
@@ -324,19 +337,20 @@ offset_right = 991.0
 offset_bottom = 112.0
 script = ExtResource("9_n10qc")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control4"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sound9"]
 position = Vector2(-4, 0)
 stream = ExtResource("10_brvu2")
+volume_db = 3.97
 
-[node name="Button" type="Button" parent="Control4/AudioStreamPlayer2D"]
+[node name="Button" type="Button" parent="Sound9/AudioStreamPlayer2D"]
 self_modulate = Color(1, 1, 1, 0)
-offset_left = -1131.0
-offset_top = 348.0
-offset_right = -1017.0
-offset_bottom = 547.0
+offset_left = -348.0
+offset_top = 493.0
+offset_right = -290.0
+offset_bottom = 673.0
 theme_override_colors/font_color = Color(0.756863, 0.6, 0.223529, 1)
 
-[node name="Control" type="Control" parent="."]
+[node name="Sound10" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1183.0
@@ -345,18 +359,19 @@ offset_right = 1222.0
 offset_bottom = 544.0
 script = ExtResource("9_n10qc")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sound10"]
 position = Vector2(-4, 0)
 stream = ExtResource("10_4o4d1")
+volume_db = 4.85
 
-[node name="Button" type="Button" parent="Control/AudioStreamPlayer2D"]
+[node name="Button" type="Button" parent="Sound10/AudioStreamPlayer2D"]
 self_modulate = Color(1, 1, 1, 0)
-offset_left = -436.0
-offset_top = -118.0
-offset_right = -321.0
-offset_bottom = 89.0
+offset_left = -541.0
+offset_top = 24.0
+offset_right = -488.0
+offset_bottom = 215.0
 
-[node name="Control2" type="Control" parent="."]
+[node name="Sound11" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1389.0
@@ -365,25 +380,26 @@ offset_right = 1946.0
 offset_bottom = 385.0
 script = ExtResource("9_n10qc")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control2"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sound11"]
 position = Vector2(-4, 0)
 stream = ExtResource("11_qxado")
+volume_db = 4.285
 
-[node name="Button" type="Button" parent="Control2/AudioStreamPlayer2D"]
+[node name="Button" type="Button" parent="Sound11/AudioStreamPlayer2D"]
 self_modulate = Color(1, 1, 1, 0)
-offset_left = -592.0
-offset_top = 337.0
-offset_right = -513.0
-offset_bottom = 536.0
+offset_left = -692.0
+offset_top = 485.0
+offset_right = -676.0
+offset_bottom = 671.0
 
-[connection signal="pressed" from="Control7/AudioStreamPlayer2D/Button" to="Control7" method="_on_button_pressed"]
-[connection signal="pressed" from="Control8/AudioStreamPlayer2D/Button" to="Control8" method="_on_button_pressed"]
-[connection signal="pressed" from="Control9/AudioStreamPlayer2D/Button" to="Control9" method="_on_button_pressed"]
-[connection signal="pressed" from="Control10/AudioStreamPlayer2D/Button" to="Control10" method="_on_button_pressed"]
-[connection signal="pressed" from="Control11/AudioStreamPlayer2D/Button" to="Control11" method="_on_button_pressed"]
-[connection signal="pressed" from="Control6/AudioStreamPlayer2D/Button" to="Control6" method="_on_button_pressed"]
-[connection signal="pressed" from="Control5/AudioStreamPlayer2D/Button" to="Control5" method="_on_button_pressed"]
-[connection signal="pressed" from="Control3/AudioStreamPlayer2D/Button" to="Control3" method="_on_button_pressed"]
-[connection signal="pressed" from="Control4/AudioStreamPlayer2D/Button" to="Control4" method="_on_button_pressed"]
-[connection signal="pressed" from="Control/AudioStreamPlayer2D/Button" to="Control" method="_on_button_pressed"]
-[connection signal="pressed" from="Control2/AudioStreamPlayer2D/Button" to="Control2" method="_on_button_pressed"]
+[connection signal="pressed" from="Sound3/AudioStreamPlayer2D/Button" to="Sound3" method="_on_button_pressed"]
+[connection signal="pressed" from="Sound4/AudioStreamPlayer2D/Button" to="Sound4" method="_on_button_pressed"]
+[connection signal="pressed" from="Sound2/AudioStreamPlayer2D/Button" to="Sound2" method="_on_button_pressed"]
+[connection signal="pressed" from="Sound5/AudioStreamPlayer2D/Button" to="Sound5" method="_on_button_pressed"]
+[connection signal="pressed" from="Sound1/AudioStreamPlayer2D/Button" to="Sound1" method="_on_button_pressed"]
+[connection signal="pressed" from="Sound6/AudioStreamPlayer2D/Button" to="Sound6" method="_on_button_pressed"]
+[connection signal="pressed" from="Sound7/AudioStreamPlayer2D/Button" to="Sound7" method="_on_button_pressed"]
+[connection signal="pressed" from="Sound8/AudioStreamPlayer2D/Button" to="Sound8" method="_on_button_pressed"]
+[connection signal="pressed" from="Sound9/AudioStreamPlayer2D/Button" to="Sound9" method="_on_button_pressed"]
+[connection signal="pressed" from="Sound10/AudioStreamPlayer2D/Button" to="Sound10" method="_on_button_pressed"]
+[connection signal="pressed" from="Sound11/AudioStreamPlayer2D/Button" to="Sound11" method="_on_button_pressed"]
