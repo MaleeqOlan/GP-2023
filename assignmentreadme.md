@@ -68,5 +68,5 @@ This is an image using a relative URL:![ImageFromGodot](image.png)
 
 This is a youtube video:
 
-[![YouTubeLink](https://youtu.be/9_mCnQXuamY)
+[![YouTubeLink](https://www.youtube.com/watch?v=9_mCnQXuamY)
 
