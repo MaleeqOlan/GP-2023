@@ -1,28 +1,32 @@
 # Project Title
 
-Name:
+Name:Maleeq Olanlokun
 
-Student Number: 
+Student Number: C23435852
 
-Class Group:
+Class Group: Solo Project
 
 # Description of the project
+Inspired by Regular Show, a cartoon I used to watch
 
 # Instructions for use
-
+Press the buttons to hear a piano sound from each button
 # How it works
+A simple code that attatches a button to a sound
 
 # List of classes/assets in the project and whether made yourself or modified or if its from a source, please give the reference
 
 | Class/asset | Source |
 |-----------|-----------|
-| MyClass.cs | Self written |
-| MyClass1.cs | Modified from [reference]() |
-| MyClass2.cs | From [reference]() |
+| MyClass.cs | Self written |![alt text](<Screenshot 2024-04-24 203718.png>)
+| MyClass1.cs | Modified from [![alt text](image-2.png)]() |
+| MyClass2.cs | From [reference]() |![alt text](image-3.png)
 
 # References
+![alt text](image-1.png)
 
 # What I am most proud of in the assignment
+I am proud of my ability to replicate the keyboard with illustrator and attach codes to play a sound , I feel like I got the most out of Godot
 
 # Proposal submitted earlier can go here:
 
@@ -49,37 +53,40 @@ This is a [hyperlink](http://bryanduggan.org)
 
 This is code:
 
-```Java
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
+```GD Script
+extends Control
+
+
+
+
+
+
+
+
+func _ready():
+	pass
+
+func _on_button_pressed():
+	$AudioStreamPlayer2D.play()
+	
+	
+	
+	
+	pass # Replace with function body.
+
 ```
 
-So is this without specifying the language:
 
 ```
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
+
+
 ```
 
-This is an image using a relative URL:
+This is an image using a relative URL:![alt text](image.png)
 
-![An image](images/p8.png)
 
 This is an image using an absolute URL:
 
-![A different image](https://bryanduggandotorg.files.wordpress.com/2019/02/infinite-forms-00045.png?w=595&h=&zoom=2)
 
 This is a youtube video:
 
