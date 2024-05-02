@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://q5x2ina237qv"
+path="res://.godot/imported/Drums.wav-aaa852fb99523cd15dc744cc6997c67a.sample"
+
+[deps]
+
+source_file="res://All sounds/Drums.wav"
+dest_files=["res://.godot/imported/Drums.wav-aaa852fb99523cd15dc744cc6997c67a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=true
+force/max_rate_hz=44682.0
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

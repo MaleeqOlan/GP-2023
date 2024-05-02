@@ -1,0 +1,253 @@
+[gd_scene load_steps=17 format=3 uid="uid://b61fa1dmqrmif"]
+
+[ext_resource type="AudioStream" uid="uid://duerp1walw6cj" path="res://All sounds/Music.wav" id="1_nk4sw"]
+[ext_resource type="Texture2D" uid="uid://cfd0hk35p345y" path="res://file (4).png" id="2_8g856"]
+[ext_resource type="AudioStream" uid="uid://jwb5n285v7fd" path="res://All sounds/Bass.wav" id="3_nn2rt"]
+[ext_resource type="AudioStream" uid="uid://q5x2ina237qv" path="res://All sounds/Drums.wav" id="4_0bk50"]
+[ext_resource type="Texture2D" uid="uid://pg5dk8wt8qre" path="res://file (2).png" id="5_kdhew"]
+[ext_resource type="Texture2D" uid="uid://d3hkljgv2ahgp" path="res://file (1).png" id="6_rprav"]
+[ext_resource type="Texture2D" uid="uid://q6va655oykvb" path="res://file (3).png" id="7_qodua"]
+[ext_resource type="Texture2D" uid="uid://bwnfot4lbea3d" path="res://file.png" id="8_73c6a"]
+[ext_resource type="Script" path="res://UI.gd" id="9_k43jl"]
+[ext_resource type="Script" path="res://Sound.gd" id="10_wcxn3"]
+[ext_resource type="AudioStream" uid="uid://6rppkn8811lu" path="res://All sounds/SFX/A Boogie Wit Da Hoodie Nice For What (Drake Remix) (Official Audio)-[AudioTrimmer.com].mp3" id="11_np8c7"]
+[ext_resource type="AudioStream" uid="uid://ddvdak1bywko3" path="res://All sounds/SFX/AllOfMy.mp3" id="12_hr5dm"]
+[ext_resource type="AudioStream" uid="uid://b3xbq5x6ioncr" path="res://All sounds/SFX/Metroo.mp3" id="13_0sq35"]
+[ext_resource type="AudioStream" uid="uid://ccmaq4e5syucx" path="res://All sounds/SFX/There's an old saying in Tennessee....mp3" id="14_fohjr"]
+[ext_resource type="Texture2D" uid="uid://cr15a7awi1fgm" path="res://unnamed.png" id="15_ox2yx"]
+[ext_resource type="Texture2D" uid="uid://i2gbfa467uul" path="res://file (5).png" id="16_o6y6y"]
+
+[node name="Game" type="Node2D"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_nk4sw")
+volume_db = -20.0
+autoplay = true
+bus = &"Music"
+
+[node name="HSlider" type="HSlider" parent="AudioStreamPlayer2D"]
+offset_right = 8.0
+offset_bottom = 16.0
+
+[node name="File(4)3" type="Sprite2D" parent="AudioStreamPlayer2D"]
+position = Vector2(1072, 77)
+scale = Vector2(0.348333, 0.335833)
+texture = ExtResource("2_8g856")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_nn2rt")
+volume_db = -20.0
+autoplay = true
+bus = &"Bass"
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_0bk50")
+volume_db = -20.0
+autoplay = true
+bus = &"Drums"
+
+[node name="Menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1159.0
+offset_bottom = 654.0
+
+[node name="ColorRect" type="ColorRect" parent="Menu"]
+layout_mode = 0
+offset_right = 1145.0
+offset_bottom = 654.0
+color = Color(1, 0, 0.0823529, 0.458824)
+
+[node name="File(4)" type="Sprite2D" parent="Menu"]
+position = Vector2(88, 528)
+scale = Vector2(0.348333, 0.335833)
+texture = ExtResource("2_8g856")
+
+[node name="File(4)3" type="Sprite2D" parent="Menu"]
+position = Vector2(88, 77.0001)
+scale = Vector2(0.348333, 0.335833)
+texture = ExtResource("2_8g856")
+
+[node name="File(4)2" type="Sprite2D" parent="Menu"]
+position = Vector2(1045, 528)
+scale = Vector2(0.348333, 0.335833)
+texture = ExtResource("2_8g856")
+
+[node name="File(2)" type="Sprite2D" parent="Menu"]
+position = Vector2(96, 548)
+scale = Vector2(0.228125, 0.275)
+texture = ExtResource("5_kdhew")
+
+[node name="File(1)" type="Sprite2D" parent="Menu"]
+light_mask = 512
+visibility_layer = 513
+position = Vector2(601, 299)
+scale = Vector2(1.28577, 1.16256)
+texture = ExtResource("6_rprav")
+
+[node name="File(3)" type="Sprite2D" parent="Menu"]
+position = Vector2(1067, 106)
+rotation = -0.00491977
+scale = Vector2(0.218058, 0.279551)
+texture = ExtResource("7_qodua")
+
+[node name="MarginContainer" type="MarginContainer" parent="Menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 131.0
+offset_top = 77.0
+offset_right = -186.0
+offset_bottom = -500.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 256
+theme_override_constants/margin_right = 256
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/h_separation = 16
+columns = 2
+
+[node name="MusicLabel" type="Label" parent="Menu/MarginContainer/VBoxContainer/GridContainer"]
+modulate = Color(0.870588, 0.556863, 0.721569, 1)
+layout_mode = 2
+text = "Music"
+
+[node name="MusicSlider" type="HSlider" parent="Menu/MarginContainer/VBoxContainer/GridContainer"]
+modulate = Color(1, 0.231373, 0, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+step = 0.05
+value = 1.0
+
+[node name="BassLabel" type="Label" parent="Menu/MarginContainer/VBoxContainer/GridContainer"]
+modulate = Color(1, 0.196078, 1, 1)
+layout_mode = 2
+text = "Bass"
+
+[node name="File" type="Sprite2D" parent="Menu/MarginContainer/VBoxContainer/GridContainer"]
+position = Vector2(654, 465)
+scale = Vector2(0.151273, 0.178357)
+texture = ExtResource("8_73c6a")
+
+[node name="BassSlider" type="HSlider" parent="Menu/MarginContainer/VBoxContainer/GridContainer"]
+modulate = Color(1, 0.152941, 1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+step = 0.05
+value = 1.0
+
+[node name="DrumsLabel" type="Label" parent="Menu/MarginContainer/VBoxContainer/GridContainer"]
+modulate = Color(1, 0.184314, 1, 1)
+layout_mode = 2
+text = "Drums"
+
+[node name="DrumsSlider" type="HSlider" parent="Menu/MarginContainer/VBoxContainer/GridContainer"]
+modulate = Color(0.478431, 0, 0.478431, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+step = 0.05
+value = 1.0
+
+[node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource("9_k43jl")
+
+[node name="Sound" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("10_wcxn3")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sound"]
+stream = ExtResource("11_np8c7")
+volume_db = 20.0
+
+[node name="Button" type="Button" parent="Sound/AudioStreamPlayer2D"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 999.0
+offset_top = 1.0
+offset_right = 1180.0
+offset_bottom = 207.0
+
+[node name="Sound2" type="Control" parent="Sound"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("10_wcxn3")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sound/Sound2"]
+stream = ExtResource("12_hr5dm")
+volume_db = 15.0
+
+[node name="Button" type="Button" parent="Sound/Sound2/AudioStreamPlayer2D"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 951.0
+offset_top = 444.0
+offset_right = 1137.0
+offset_bottom = 659.0
+
+[node name="Sound3" type="Control" parent="Sound"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("10_wcxn3")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sound/Sound3"]
+stream = ExtResource("13_0sq35")
+volume_db = 20.0
+
+[node name="Button" type="Button" parent="Sound/Sound3/AudioStreamPlayer2D"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 588.0
+offset_top = 193.0
+offset_right = 838.0
+offset_bottom = 288.0
+
+[node name="Sound4" type="Control" parent="Sound"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("10_wcxn3")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sound/Sound4"]
+stream = ExtResource("14_fohjr")
+volume_db = 20.0
+
+[node name="Button" type="Button" parent="Sound/Sound4/AudioStreamPlayer2D"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -3.0
+offset_top = 451.0
+offset_right = 178.0
+offset_bottom = 646.0
+
+[node name="Unnamed" type="Sprite2D" parent="."]
+position = Vector2(593, 449)
+scale = Vector2(0.318911, 0.272106)
+texture = ExtResource("15_ox2yx")
+
+[node name="File(5)" type="Sprite2D" parent="."]
+position = Vector2(90, 101)
+scale = Vector2(0.264946, 0.212636)
+texture = ExtResource("16_o6y6y")
+
+[connection signal="value_changed" from="Menu/MarginContainer/VBoxContainer/GridContainer/MusicSlider" to="UI" method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="Menu/MarginContainer/VBoxContainer/GridContainer/BassSlider" to="UI" method="_on_bass_slider_value_changed"]
+[connection signal="value_changed" from="Menu/MarginContainer/VBoxContainer/GridContainer/DrumsSlider" to="UI" method="_on_drums_slider_value_changed"]
+[connection signal="pressed" from="Sound/AudioStreamPlayer2D/Button" to="Sound" method="_on_button_pressed"]
+[connection signal="pressed" from="Sound/Sound2/AudioStreamPlayer2D/Button" to="Sound/Sound2" method="_on_button_pressed"]
+[connection signal="pressed" from="Sound/Sound3/AudioStreamPlayer2D/Button" to="Sound/Sound3" method="_on_button_pressed"]
+[connection signal="pressed" from="Sound/Sound4/AudioStreamPlayer2D/Button" to="Sound/Sound4" method="_on_button_pressed"]

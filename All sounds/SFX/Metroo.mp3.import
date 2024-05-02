@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b3xbq5x6ioncr"
+path="res://.godot/imported/Metroo.mp3-a59200013ffaec10afc4827f65250626.mp3str"
+
+[deps]
+
+source_file="res://All sounds/SFX/Metroo.mp3"
+dest_files=["res://.godot/imported/Metroo.mp3-a59200013ffaec10afc4827f65250626.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

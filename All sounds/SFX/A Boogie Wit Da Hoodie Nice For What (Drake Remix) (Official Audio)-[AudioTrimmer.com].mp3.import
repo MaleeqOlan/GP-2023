@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://6rppkn8811lu"
+path="res://.godot/imported/A Boogie Wit Da Hoodie Nice For What (Drake Remix) (Official Audio)-[AudioTrimmer.com].mp3-2ab7307b0976aea305d676347ec8bae0.mp3str"
+
+[deps]
+
+source_file="res://All sounds/SFX/A Boogie Wit Da Hoodie Nice For What (Drake Remix) (Official Audio)-[AudioTrimmer.com].mp3"
+dest_files=["res://.godot/imported/A Boogie Wit Da Hoodie Nice For What (Drake Remix) (Official Audio)-[AudioTrimmer.com].mp3-2ab7307b0976aea305d676347ec8bae0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bffh6xnhypj0c"
+path="res://.godot/imported/I Alone Am The Honored OneDub vocals only-[AudioTrimmer.com].mp3-c41d58c1ab5bf27d0688f37d45493c56.mp3str"
+
+[deps]
+
+source_file="res://All sounds/SFX/I Alone Am The Honored OneDub vocals only-[AudioTrimmer.com].mp3"
+dest_files=["res://.godot/imported/I Alone Am The Honored OneDub vocals only-[AudioTrimmer.com].mp3-c41d58c1ab5bf27d0688f37d45493c56.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ccmaq4e5syucx"
+path="res://.godot/imported/There's an old saying in Tennessee....mp3-f20133aba01e6dcfe4d30be86c74762f.mp3str"
+
+[deps]
+
+source_file="res://All sounds/SFX/There's an old saying in Tennessee....mp3"
+dest_files=["res://.godot/imported/There's an old saying in Tennessee....mp3-f20133aba01e6dcfe4d30be86c74762f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
