@@ -19,11 +19,11 @@ Using GD Script and nodes, I split each instrumental into a differnt master and 
 | Class/asset | Source |
 |-----------|-----------|
 | MyClass.cs | Self written |![Made by Me](<c:\Users\C23435852\Pictures\Screenshots\Tribute.png>)
-| MyClass1.cs | Modified from [![Aboogie](![alt text](image.png))]() |
-| MyClass2.cs | From [JCOLE]() |![alt text](![alt text](image-1.png))
+| MyClass1.cs | Modified from [![Aboogie](![alt text](image.p![alt text](image-6.png)))]() |
+| MyClass2.cs | From [JCOLE]() |![alt text](![alt text](![alt text](image-4.png).png))
 
 # References
-[ImanArtist](![alt text](image-2.png))
+[ImanArtist](![alt text](![alt text](image-5.png)))
 
 # What I am most proud of in the assignment
 I feel like i was able to show of my respect to all these artists and my love for music, all in one go
@@ -95,7 +95,7 @@ func _on_drums_slider_value_changed(value):
 
 ```
 
-This is an image using a relative URL:![ImageFromGodot](image.png)
+This is an image using a relative URL:![ImageFromGodot](c:\Users\C23435852\Pictures\Screenshots\Tribute.png)
 
 
 This is a youtube video:
